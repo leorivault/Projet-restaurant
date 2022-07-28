@@ -39,6 +39,29 @@ class RestaurantRepository extends ServiceEntityRepository
         }
     }
 
+    /* public function test(RstaurantSearch $search): Query
+    {
+
+
+        $entityManager = $this->getEntityManager();
+        if ($search->getName()) {
+
+
+
+
+            $query = $entityManager->createQuery(
+                'SELECT i
+                FROM App\Entity\Restaurant i
+                WHERE i.name = :nom'
+            )->setParameter('nom', $search);
+
+            return $query->getResult();
+        }
+
+        return $entityManager = $this->getEntityManager();
+    } */
+
+
 //    /**
 //     * @return Restaurant[] Returns an array of Restaurant objects
 //     */
