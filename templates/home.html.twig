@@ -3,6 +3,10 @@
 {% block title %}Projet Restaurant{% endblock %}
 
 {% block body %}
-<p>Coucou 3</p>
+    <ul>
+		{% for restaurant in restaurants%}
+            <li> {# <a href="{{path('restaurant.show', {id: restaurant.id})}}" class="list-group-item list-group-item-action" style="width: 50%">{{restaurant.name}}</a> #}{{restaurant.name}}</li>
+        {% endfor %}
+    </ul>
 {% endblock %}
 

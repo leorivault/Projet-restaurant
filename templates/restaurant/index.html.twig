@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mes restaurant
+{% endblock %}
+
+{% block body %}
+	<div class="container mt-4">
+		<h1>Mes restaurant</h1>
+
+        {# <p>{{tmin}}</p>
+        <p>{{tmax}}</p> #}
+
+		{# <div class="container">
+			{{ form_start(form)}}
+				<button class="btn btn--primary">Rechercher</button>
+			{{ form_end(form)}}
+		</div> #}
+
+        <a href="{{ path('restaurant.add') }}" class="btn btn-primary">Créer un restaurant</a>
+
+		<table class="table">
+			<thead>
+				<tr>
+					<th scope="col">Nom</th>
+					<th scope="col">Ville</th>
+					<th scope="col">Categorie</th>
+					<th scope="col">Photo</th>
+					<th scope="col">Edition</th>
+					<th scope="col">Suppression</th>
+				</tr>
+			</thead>
+			<tbody>
+		
+				{% for restaurant in restaurants%}
+
+					<tr class="table-primary">
+						<th scope="row">{{restaurant.name}}</th>
+						<td>{{restaurant.city}}</td>
+						<td>{{restaurant.categorie.name}}</td>
+						<td><img style="max-width: 150px" src="{{ vich_uploader_asset(restaurant, 'imageFile')}}"></td>
+						{# <td><a href="{{path('ingredient.edit', {id: ingredient.id})}}" class="btn btn-info">Modifier<a/></td>
+						<td><a href="{{path('ingredient.delete', {id: ingredient.id})}}" class="btn btn-warning">Supprimer<a/></td> #}
+				
+					</tr>
+				{% endfor %}
+
+			</tbody>
+		</table>
+
+
+	</div>
+{% endblock %}

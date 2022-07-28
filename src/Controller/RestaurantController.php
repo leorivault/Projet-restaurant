@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Restaurant;
 use App\Form\RestaurantType;
+use App\Repository\RestaurantRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -13,6 +14,17 @@ use Doctrine\ORM\EntityManagerInterface;
 class RestaurantController extends AbstractController
 
 {
+
+    #[Route('/restaurant', 'restaurant.index', methods: ['GET'])]
+    public function index(RestaurantRepository $repository): Response {
+
+        $restaurants = $repository->findAll();
+
+        return $this->render('restaurant/index.html.twig', [
+            'restaurants' => $restaurants,
+        ]);
+
+    }
 
     #[Route('/restaurant/add', name: 'restaurant.add', methods: ['GET', 'POST'])]
     public function new(Request $request, EntityManagerInterface $manager): Response
