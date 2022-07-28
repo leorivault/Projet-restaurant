@@ -38,8 +38,8 @@
 						<td>{{restaurant.city}}</td>
 						<td>{{restaurant.categorie.name}}</td>
 						<td><img style="max-width: 150px" src="{{ vich_uploader_asset(restaurant, 'imageFile')}}"></td>
-						{# <td><a href="{{path('ingredient.edit', {id: ingredient.id})}}" class="btn btn-info">Modifier<a/></td>
-						<td><a href="{{path('ingredient.delete', {id: ingredient.id})}}" class="btn btn-warning">Supprimer<a/></td> #}
+						<td><a href="{{path('restaurant.edit', {id: restaurant.id})}}" class="btn btn-info">Modifier<a/></td>
+						<td><a href="{{path('restaurant.delete', {id: restaurant.id})}}" class="btn btn-danger">Supprimer<a/></td>
 				
 					</tr>
 				{% endfor %}

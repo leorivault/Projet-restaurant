@@ -11,6 +11,7 @@ class HomeController extends AbstractController
 
 {
 
+    //affiche la liste des restaurants dans la page d'acceuil 
     #[Route('/', 'home.index', methods: ['GET'])]
     public function index(RestaurantRepository $repository): Response {
 
