@@ -2,7 +2,7 @@
 
 Axes d'améloriations : 
 
--Concernant la recherche, je n'ai aps réussi à la finalisé, j'ai créer une requête personnalisé dans le repository, j'ai bien le paramètre qui est passé dans l'url mais je n'ai malheureusement pas pu finir par manque de temps
+-Concernant la recherche, je n'ai pas réussi à la finalisé, j'ai créer une requête personnalisé dans le repository, j'ai bien le paramètre qui est passé dans l'url mais je n'ai malheureusement pas pu finir par manque de temps
 
 -Concernant Jquery, je me suis retrouvé bloquer dans les assets, je n'ai pas réussi à les faire fonctionné et malgré les recherches sur internet je n'ai pas réussi à trouvé la solution. Je n'avais pas accès au css ni au js. J'aurais voulu mettre en place une pop-up de confirmation lorsque l'on souhaite supprimé un restaurant pour éviter les mauvaises manipulation
 
