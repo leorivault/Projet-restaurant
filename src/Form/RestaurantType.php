@@ -62,8 +62,13 @@ class RestaurantType extends AbstractType
                 'class' => Categorie::class,
                 'choice_label' => function ($category) {
                     return $category->getName();
-                }
+                },
+                'label_attr' => [
+                    'class' => 'form-label mt-4',
+                ],
+
             ])
+            //gestion image via vich
             ->add('imageFile', VichImageType::class, [
                 'label' => 'Image',
                 'label_attr' => [
@@ -73,9 +78,9 @@ class RestaurantType extends AbstractType
             //bouton submit
             ->add('submit', SubmitType::class, [
                 'attr' => [
-                    'class' => 'btn btn-primary',
+                    'class' => 'btn btn-primary mt-4',
                 ],
-                'label' => 'Créer mon ingrédient',
+                'label' => 'Créer mon restaurant',
             ])
         ;
     }

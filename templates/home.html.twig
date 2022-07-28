@@ -1,11 +1,16 @@
 {% extends "base.html.twig" %}
 
-{% block title %}Projet Restaurant{% endblock %}
-
 {% block body %}
-    <ul>
-		{% for restaurant in restaurants%}
-            <li> {# <a href="{{path('restaurant.show', {id: restaurant.id})}}" class="list-group-item list-group-item-action" style="width: 50%">{{restaurant.name}}</a> #}{{restaurant.name}}</li>
+
+    	{# <div class="container">
+			{{ form_start(form)}}
+				<button class="btn btn-primary">Rechercher</button>
+			{{ form_end(form)}}
+		</div> #}
+
+    <ul style="list-style-type:none;">
+		{% for restaurant in restaurants %}
+            <li><a href="{{path('restaurant.show', {id: restaurant.id})}}" class="list-group-item list-group-item-action" style="text-align: center; width: 33%; margin-top:30px;  margin-left: auto; margin-right: auto;">{{restaurant.name}}</a></li>
         {% endfor %}
     </ul>
 {% endblock %}

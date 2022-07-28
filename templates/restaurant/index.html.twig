@@ -1,24 +1,12 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Mes restaurant
-{% endblock %}
-
 {% block body %}
 	<div class="container mt-4">
 		<h1>Mes restaurant</h1>
 
-        {# <p>{{tmin}}</p>
-        <p>{{tmax}}</p> #}
-
-		{# <div class="container">
-			{{ form_start(form)}}
-				<button class="btn btn--primary">Rechercher</button>
-			{{ form_end(form)}}
-		</div> #}
-
         <a href="{{ path('restaurant.add') }}" class="btn btn-primary">Créer un restaurant</a>
 
-		<table class="table">
+		<table class="table"  style="text-align: center"   >
 			<thead>
 				<tr>
 					<th scope="col">Nom</th>

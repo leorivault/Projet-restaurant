@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+		<h1 style="text-align: center" class="mt-4">{{restaurant.name}}</h1>
+
+	<p style=" margin-left: 50px" class="mt-4">Votre restaurant
+		{{restaurant.name}}
+		se situe à
+		{{restaurant.city}}</p>
+
+	<p style=" margin-left: 50px" class="mt-4">Il fera entre
+		{{tmin}}°C et
+		{{tmax}}°C à
+		{{restaurant.city}}</p>
+
+
+	<div class="container">
+		<p style=" margin-left: 50px" class="mt-4">{{restaurant.description}}</p>
+	</div>
+
+	<img style=" margin-left: 50px" class="mt-4" style="max-width: 500px" src="{{ vich_uploader_asset(restaurant, 'imageFile')}}">
+
+
+{% endblock %}
